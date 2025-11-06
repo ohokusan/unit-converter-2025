@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./styles.css" rel="stylesheet" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="converter">
+      <div class="converter__input">
+        <h1 class="converter__title">Metric/Imperial Unit Conversion</h1>
+        <input
+          class="converter__value"
+          type="number"
+          placeholder="1"
+          aria-label="Value to convert"
+        />
+        <button class="converter__submit">Convert</button>
+      </div>
+
+      <div class="converter__output">
+        <dl class="converter__item">
+          <dt class="converter__item-heading">Length (Meter/Feet)</dt>
+          <dd class="converter__item-result">
+            20 meters = 65.616 feet | 20 feet = 6.096 meters
+          </dd>
+        </dl>
+      </div>
+      <script src="index.js"></script>
+    </section>
+  </body>
+</html>
