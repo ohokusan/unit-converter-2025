@@ -11,7 +11,7 @@ const measureUnitsArr = [
   {
     name: "Volume",
     metricUnit: ["Litres", "L"],
-    imperialUnit: ["Imperial UK Gallons", "gal"],
+    imperialUnit: ["UK Gallons", "gal"],
     factor: 0.2199692483, // 1l = 1/4.54609.. gallons
   },
   {
@@ -24,15 +24,26 @@ const measureUnitsArr = [
 let defaultNumber = 1;
 let number = defaultNumber;
 
-convertBtn.addEventListener("click", function () {
-  if (inputEl.value === "") {
-    inputEl.value = defaultNumber;
-  } else {
-    number = inputEl.value;
-  }
-  console.log(number);
-  render(number);
+inputEl.value = String(defaultNumber);
+render(1);
+
+inputEl.addEventListener("click", function () {
+  inputEl.value = "";
 });
+
+inputEl.addEventListener("input", function () {
+  render(Number(inputEl.value));
+});
+
+// convertBtn.addEventListener("click", function () {
+//   if (inputEl.value === "") {
+//     inputEl.value = defaultNumber;
+//   } else {
+//     number = inputEl.value;
+//   }
+//   console.log(number);
+//   render(number);
+// });
 
 function render(number) {
   createElements(measureUnitsArr, number);
@@ -49,7 +60,7 @@ function createElements(array, number) {
       <p class="converter__item-result">
         ${number} ${array[i].metricUnit[1]} = ${(
       number * array[i].factor
-    ).toFixed(3)} ${array[i].imperialUnit[1]} | ${number} ${
+    ).toFixed(3)} ${array[i].imperialUnit[1]} <br> ${number} ${
       array[i].imperialUnit[1]
     } = ${(number / array[i].factor).toFixed(3)} ${array[i].metricUnit[1]}
       </p>
@@ -59,7 +70,3 @@ function createElements(array, number) {
 
   outputListEl.innerHTML = elements;
 }
-
-console.log(inputEl);
-console.log(convertBtn);
-console.log(outputListEl);
