@@ -21,17 +21,18 @@
           type="number"
           placeholder="Number"
           aria-label="Value to convert"
+          id="input-el"
         />
-        <button class="converter__submit-btn">Convert</button>
+        <button class="converter__submit-btn" id="convert-btn">Convert</button>
       </div>
 
-      <div class="converter__output">
-        <dl class="converter__item">
-          <dt class="converter__item-heading">Length (Meter/Feet)</dt>
-          <dd class="converter__item-result">
+      <div class="converter__output" id="output-list-el">
+        <article class="converter__item">
+          <h2 class="converter__item-heading">Length (Meter/Feet)</h2>
+          <p class="converter__item-result">
             20 meters = 65.616 feet | 20 feet = 6.096 meters
-          </dd>
-        </dl>
+          </p>
+        </article>
       </div>
       <script src="index.js"></script>
     </section>

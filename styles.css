@@ -125,6 +125,7 @@ body {
   background: var(--clr-bg-2);
   border-radius: 5px;
   padding: 25px 75px;
+  margin-bottom: 24px;
 }
 
 .converter__item-heading {
