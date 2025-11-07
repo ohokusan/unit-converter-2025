@@ -17,8 +17,8 @@ assistant for metric/imperial conversions. <br> Try it with **Live Demo**:
 
 - [x] Set up `.gitignore`
 - [x] Create `README.md`
-- [ ] Initialize main project structure (HTML)
-- [ ] Add styles (CSS)
+- [x] Initialize main project structure (HTML)
+- [x] Add styles (CSS)
 - [ ] Add the basic functionality (JS)
 - [ ] Adapt for Chrome Extension requirements (manifest.js)
 
